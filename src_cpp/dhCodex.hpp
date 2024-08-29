@@ -327,7 +327,7 @@ namespace {
     template <typename T = Thing>
     T* get(const std::string& uuid) {
         std::lock_guard<std::mutex> lock{ *_get_mutex() };
-        return get_unsafe<T>(uuid);
+        return get__unsafe<T>(uuid);
     }
 
     /**
